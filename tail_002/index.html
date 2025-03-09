@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Exercises with Tailwind CSS</title>
+    <!-- Link to the locally built Tailwind CSS file -->
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gray-100 font-sans text-gray-800 p-6">
+    <header class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-blue-600 mb-4">
+            Box Model Exercises with Tailwind CSS
+        </h1>
+        <p class="text-lg text-gray-600">
+            Exploring borders, padding, margins, and box-sizing
+        </p>
+    </header>
+
+    <main class="max-w-4xl mx-auto space-y-12">
+        <!-- Task 1: Box with Different Border Widths and Colors -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-blue-500 mb-4">
+                Task 1: Different Border Widths and Colors
+            </h2>
+            <div class="border-t-4 border-b-8 border-l-2 border-r-6 border-t-red-500 border-b-blue-500 border-l-green-500 border-r-yellow-500 bg-gray-200 p-4">
+                This box has a 4px red top border, 8px blue bottom border, 2px green left border, and 6px yellow right border.
+            </div>
+            <p class="mt-4 text-gray-700">
+                Tailwind’s <code class="bg-gray-200 px-1 rounded">border-[side]-[width]</code> and <code class="bg-gray-200 px-1 rounded">border-[side]-[color]</code> classes allow precise control over each border.
+            </p>
+        </section>
+
+        <!-- Task 2: Add Padding to a Div -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-blue-500 mb-4">
+                Task 2: Padding Changes
+            </h2>
+            <div class="bg-gray-200 p-0 mb-4">
+                No padding: Content touches the edges.
+            </div>
+            <div class="bg-gray-200 p-6 border border-gray-400">
+                With 1.5rem (24px) padding: Notice the space inside the box.
+            </div>
+            <p class="mt-4 text-gray-700">
+                Tailwind’s <code class="bg-gray-200 px-1 rounded">p-[size]</code> class adds padding uniformly. Compare the two boxes to see the effect.
+            </p>
+        </section>
+
+        <!-- Task 3: Adjust Margins for Spacing -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-blue-500 mb-4">
+                Task 3: Margin Spacing
+            </h2>
+            <div class="space-y-4">
+                <div class="bg-gray-200 p-4 border border-gray-400">
+                    Box 1: Default spacing.
+                </div>
+                <div class="bg-gray-200 p-4 border border-gray-400 mt-8">
+                    Box 2: 2rem (32px) top margin for extra spacing.
+                </div>
+                <div class="bg-gray-200 p-4 border border-gray-400 mt-12">
+                    Box 3: 3rem (48px) top margin for even more spacing.
+                </div>
+            </div>
+            <p class="mt-4 text-gray-700">
+                Tailwind’s <code class="bg-gray-200 px-1 rounded">mt-[size]</code> and <code class="bg-gray-200 px-1 rounded">space-y-[size]</code> classes control margins and spacing between elements.
+            </p>
+        </section>
+
+        <!-- Task 4: Use box-sizing: border-box -->
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-blue-500 mb-4">
+                Task 4: Box-Sizing: Border-Box
+            </h2>
+            <div class="w-64 bg-gray-200 p-4 border-4 border-blue-500 mb-4">
+                Without <code class="bg-gray-200 px-1 rounded">box-border</code>: Width is 256px + padding + border (total > 256px).
+            </div>
+            <div class="w-64 bg-gray-200 p-4 border-4 border-blue-500 box-border">
+                With <code class="bg-gray-200 px-1 rounded">box-border</code>: Width stays 256px, including padding and border.
+            </div>
+            <p class="mt-4 text-gray-700">
+                Tailwind’s <code class="bg-gray-200 px-1 rounded">box-border</code> applies <code>box-sizing: border-box</code>, ensuring padding and borders don’t increase the element’s size beyond its set width.
+            </p>
+        </section>
+    </main>
+
+    <footer class="text-center mt-10 text-gray-500 text-sm">
+        <p>Created on March 9, 2025, with Tailwind CSS</p>
+    </footer>
+</body>
+</html>

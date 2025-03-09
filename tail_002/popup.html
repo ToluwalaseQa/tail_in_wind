@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Exercise</title>
+    <!-- Link to your locally built Tailwind CSS file -->
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gray-100 font-sans text-center p-10 md:p-14">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">Display & Positioning Exercises</h2>
+    <p class="text-lg text-gray-600 mb-6">Create a button "CLICK HERE". Once the button is pressed, show a popup below. Popup should be positioned centered to the screen.</p>
+    
+    <button class="click-btn bg-violet-600 text-white border-none py-3 px-5 rounded-lg cursor-pointer text-base hover:bg-green-700 transition-colors" onclick="showPopup()">CLICK HERE</button>
+    
+    <div class="popup-overlay fixed inset-0 bg-black bg-opacity-30 hidden justify-center items-center" id="popup">
+        <div class="popup bg-white p-5 rounded-xl shadow-[5px_5px_15px_rgba(0,0,0,0.1)] w-[320px] text-left relative max-w-[90%]">
+            <button class="close-btn absolute top-4 right-4 bg-white rounded-full w-8 h-8 flex items-center justify-center border-none text-lg cursor-pointer text-gray-600 hover:text-gray-800 shadow-[0_4px_6px_rgba(0,0,0,0.1)] transition-colors z-10" onclick="hidePopup()">×</button>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Cancel Item</h3>
+            <p class="text-base text-gray-600 mb-3">Are you sure to cancel this item?</p>
+            <div class="order-box bg-gray-50 p-3 rounded-lg border border-gray-300 mb-3">
+                <strong class="text-gray-800">Tasty Burger</strong><br>
+                <small class="text-gray-500 text-sm">Size: Small, Cheese: A little bit, Salt: No</small>
+            </div>
+            <button class="cancel-btn bg-red-700 text-white border-none py-3 w-full rounded-3xl cursor-pointer text-base hover:bg-red-800 transition-colors" onclick="hidePopup()">Cancel Items</button>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+        function hidePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+</body>
+</html>

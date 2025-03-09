@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Benefits</title>
+    <!-- Include Tailwind CSS via CDN for simplicity -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800 p-6 md:p-12">
+    <header class="text-center mb-10">
+        <h1 class="text-4xl md:text-5xl font-bold text-blue-600 mb-4">
+           Task: Research and explain the benefits of using Tailwind CSS over Bootstrap or custom CSS.
+        </h1>
+        <br>
+        <h1 class="text-4xl md:text-5xl font-bold text-blue-600 mb-4">
+            Benefits of Using Tailwind CSS Over Bootstrap or Custom CSS
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600">
+            A modern utility-first framework for efficient, customizable web design
+        </p>
+    </header>
+
+    <main class="max-w-4xl mx-auto space-y-8">
+        <!-- Benefit 1: Utility-First Approach -->
+        <section class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h2 class="text-2xl font-semibold text-blue-500 mb-3">
+                1. Utility-First Approach
+            </h2>
+            <p class="text-gray-700">
+                Tailwind CSS uses a utility-first approach, providing small, composable classes (e.g., <code class="bg-gray-200 px-1 rounded">text-blue-500</code>, <code class="bg-gray-200 px-1 rounded">p-6</code>) that you apply directly in your HTML. Unlike Bootstrap, which relies on predefined components with limited flexibility, Tailwind lets you build unique designs without being constrained by a specific look. Compared to custom CSS, it eliminates the need to write and maintain separate stylesheets, speeding up development.
+            </p>
+        </section>
+
+        <!-- Benefit 2: High Customizability -->
+        <section class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h2 class="text-2xl font-semibold text-blue-500 mb-3">
+                2. High Customizability
+            </h2>
+            <p class="text-gray-700">
+                Tailwind is highly customizable through its configuration file (<code class="bg-gray-200 px-1 rounded">tailwind.config.js</code>). You can define your own colors, spacing, fonts, and more, tailoring the framework to your project’s needs. Bootstrap offers customization via Sass variables, but it’s less intuitive and often requires overriding defaults. Custom CSS gives you full control, but at the cost of time and effort—Tailwind strikes a balance by offering flexibility without starting from scratch.
+            </p>
+        </section>
+
+        <!-- Benefit 3: Faster Development -->
+        <section class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h2 class="text-2xl font-semibold text-blue-500 mb-3">
+                3. Faster Development
+            </h2>
+            <p class="text-gray-700">
+                With Tailwind, you style elements directly in your markup, reducing context-switching between HTML and CSS files. Bootstrap speeds up prototyping with its ready-made components (e.g., navbars, buttons), but tailoring them can slow you down. Custom CSS requires writing every style manually, which is time-consuming, especially for large projects. Tailwind’s utility classes make rapid UI development possible without sacrificing uniqueness.
+            </p>
+        </section>
+
+        <!-- Benefit 4: Smaller File Sizes -->
+        <section class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h2 class="text-2xl font-semibold text-blue-500 mb-3">
+                4. Smaller File Sizes
+            </h2>
+            <p class="text-gray-700">
+                Tailwind integrates with tools like PurgeCSS to remove unused styles, often resulting in CSS bundles under 10kB. Bootstrap’s full package, including CSS and JavaScript (e.g., Popper.js, jQuery), can exceed 300kB, potentially slowing down your site. Custom CSS can be lean, but without optimization, it often grows bloated as projects scale. Tailwind ensures performance without extra effort.
+            </p>
+        </section>
+
+        <!-- Benefit 5: Responsive Design Made Easy -->
+        <section class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h2 class="text-2xl font-semibold text-blue-500 mb-3">
+                5. Responsive Design Made Easy
+            </h2>
+            <p class="text-gray-700">
+                Tailwind’s built-in responsive prefixes (e.g., <code class="bg-gray-200 px-1 rounded">md:text-xl</code>, <code class="bg-gray-200 px-1 rounded">lg:p-12</code>) let you adjust styles across breakpoints without writing media queries. Bootstrap’s grid system is responsive but less granular, while custom CSS demands manual media queries, adding complexity. Tailwind simplifies creating mobile-first, adaptive designs.
+            </p>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-3">
+                Why Choose Tailwind?
+            </h2>
+            <p class="text-gray-700">
+                Tailwind CSS combines the best of both worlds: faster development than custom CSS and more flexibility than Bootstrap. It’s ideal for developers who want efficiency without sacrificing creativity. While Bootstrap suits quick prototypes with a uniform look, and custom CSS offers total control, Tailwind’s utility-first design, customizability, and performance make it a standout choice for modern web development.
+            </p>
+        </section>
+
+         <h2 class="text-2xl font-semibold text-blue-600 mb-3">
+                Solution to Assessments
+            </h2>
+
+         <!-- New Card Links Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Card 1: Tailwind CSS Site -->
+            <a href="https://tailwindcss.com" target="_blank" class="block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-blue-50 transition-all">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">Explore Tailwind CSS</h3>
+                <p class="text-gray-600">Visit the official Tailwind CSS website to dive deeper into its features and documentation.</p>
+            </a>
+
+            <!-- Card 2: Bootstrap Site -->
+            <a href="https://getbootstrap.com" target="_blank" class="block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-blue-50 transition-all">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">Check Out Bootstrap</h3>
+                <p class="text-gray-600">See what Bootstrap offers and compare it to Tailwind for your next project.</p>
+            </a>
+        </section>
+    </main>
+
+    <footer class="text-center mt-10 text-gray-500 text-sm">
+        <p>Created on March 9, 2025, with Tailwind CSS</p>
+    </footer>
+</body>
+</html>

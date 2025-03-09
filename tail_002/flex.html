@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout with Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- Link to your locally built Tailwind CSS file -->
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="font-lato bg-red-100 flex justify-center items-center min-h-screen p-10">
+    <div class="flex-container flex flex-col gap-4 w-full max-w-6xl">
+        <!-- Row 1 -->
+        <div class="row flex flex-wrap gap-4 justify-center">
+            <div class="box-item shadow-red-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">A1</div>
+            <div class="box-item shadow-red-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">A2</div>
+            <div class="box-item shadow-red-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">A3</div>
+            <div class="box-item shadow-red-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">A4</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">A5</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">A6</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">B1</div>
+            <div class="box-item seat paid bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">B2</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">B3</div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row flex flex-wrap gap-4 justify-center">
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">B5</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">B6</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">C1</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">C2</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">C3</div>
+            <div class="box-item seat paid bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">C4</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">C5</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">C6</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">C7</div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="row flex flex-wrap gap-4 justify-center">
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">D2</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">E1</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">E2</div>
+            <div class="box-item seat paid bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">E3</div>
+            <div class="box-item shadow-red-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">E4</div>
+            <div class="box-item shadow-red-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">E5</div>
+            <div class="box-item shadow-red-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">E6</div>
+            <div class="box-item shadow-red-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">E7</div>
+            <div class="box-item shadow-red-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">E8</div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="row flex flex-wrap gap-4 justify-center">
+            <div class="box-item shadow-red-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">F2</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">F3</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">F4</div>
+            <div class="box-item shadow-red-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">C5</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">D1</div>
+            <div class="box-item shadow-red-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">D1</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">D1</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">D1</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">D1</div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="row flex flex-wrap gap-4 justify-center">
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">C2</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">C3</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">C4</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">C5</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">D1</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">D1</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">D1</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">D1</div>
+            <div class="box-item shadow-green-custom bg-gray-100 rounded-lg p-4 min-w-[60px] h-10 flex items-center flex-1 max-w-[70px]">D1</div>
+        </div>
+    </div>
+</body>
+</html>
