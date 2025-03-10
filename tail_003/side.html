@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>McDonald's Order Status - Responsive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen flex justify-center items-start p-2 sm:p-4 bg-gradient-to-r from-gray-100 to-red-50 overflow-x-hidden">
+    <div class="layout-container w-full max-w-7xl p-2 sm:p-4 flex flex-col gap-2 sm:gap-4 min-h-[calc(100vh-1rem)] bg-white rounded-xl">
+      <!-- Top Header -->
+      <div class="top-header flex flex-col sm:flex-row justify-between items-center p-4 rounded-lg bg-gradient-to-r from-red-50 to-white shadow-md">
+        <div class="title-section flex items-center gap-3 sm:gap-4 mb-2 sm:mb-0">
+          <div class="status-icon w-8 h-8 sm:w-10 sm:h-10 flex justify-center items-center">
+            <img src="Logo (1).png" alt="Orderific" class="w-full h-full object-contain" />
+          </div>
+          <h1 class="text-base sm:text-lg font-bold text-black">Order Status</h1>
+        </div>
+        <div class="fullscreen-section flex items-center gap-2">
+          <div class="fullscreen-btn w-6 h-6 bg-white border border-gray-300 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-100">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 15V10H6.5V13.5H10V15H5ZM13.5 10V6.5H10V5H15V10H13.5Z" fill="black"/>
+            </svg>
+          </div>
+          <span class="fullscreen-text text-xs sm:text-sm text-black">FullScreen</span>
+        </div>
+      </div>
+
+      <!-- McDonald's Header -->
+      <div class="header flex justify-between items-center p-4 bg-gray-200 rounded-lg">
+        <div class="logo flex items-center gap-2">
+          <img src="image 2.png" alt="McDonald's Logo" class="w-6 h-6 sm:w-8 sm:h-8">
+          <span class="text-base sm:text-lg font-bold">McDonald's</span>
+        </div>
+        <div class="time text-base sm:text-lg text-black"><strong>15:03</strong></div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content flex flex-col md:flex-row gap-2 sm:gap-4 flex-1 overflow-hidden">
+        <!-- Sidebar Container -->
+        <div class="sidebar-container flex flex-row md:flex-col justify-between w-full md:w-16 bg-white rounded-[40px] shadow-md p-2 order-1 md:order-0">
+          <div class="sidebar w-full bg-black p-2 rounded-[40px] flex flex-row md:flex-col items-center gap-3 md:gap-5">
+            <div class="icon w-8 h-8 md:w-10 md:h-10 bg-gray-700 rounded-full flex justify-center items-center cursor-pointer">
+              <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Clipboard List SVG -->
+                <path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="white" fill-opacity="0.2"/>
+                <path d="M21.2084 23.792H26.7916V22.7087H21.2084V23.792ZM21.2084 20.792H26.7916V19.7087H21.2084V20.792ZM29.5464 30.5259L26.8695 27.0087C26.6798 26.7542 26.4449 26.5572 26.1649 26.4178C25.8849 26.2784 25.5799 26.2087 25.25 26.2087H18.4167V17.7567C18.4167 17.3816 18.5463 17.0646 18.8055 16.8055C19.0647 16.5465 19.3819 16.417 19.7573 16.417H28.2495C28.6248 16.417 28.941 16.5465 29.1979 16.8055C29.4548 17.0646 29.5833 17.3816 29.5833 17.7567V30.2439C29.5833 30.2939 29.582 30.3429 29.5793 30.3911C29.5766 30.4393 29.5657 30.4843 29.5464 30.5259ZM19.7564 31.5836C19.3813 31.5836 19.0643 31.4541 18.8052 31.1951C18.5462 30.936 18.4167 30.619 18.4167 30.2439V27.292H25.25C25.3932 27.292 25.5337 27.3229 25.6715 27.3849C25.8093 27.4469 25.9261 27.5412 26.022 27.6679L28.8798 31.4243C28.7943 31.4707 28.6955 31.5088 28.5835 31.5387C28.4714 31.5687 28.3581 31.5836 28.2436 31.5836H19.7564Z" fill="white"/>
+              </svg>
+            </div>
+            <!-- Repeat other icons with adjusted sizes -->
+            <div class="icon w-8 h-8 md:w-10 md:h-10 bg-gray-700 rounded-full flex justify-center items-center cursor-pointer">
+              <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Table SVG -->
+                <path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="white" fill-opacity="0.2"/>
+                <path d="M19.3045 29.5909L20.4904 27.1134C20.5748 26.9157 20.7086 26.7653 20.8918 26.6622C21.0751 26.5591 21.2698 26.5076 21.476 26.5076H23.4584V22.679C21.515 22.6256 19.8863 22.3957 18.5722 21.9891C17.2581 21.5826 16.601 21.0861 16.601 20.4996C16.601 19.8489 17.3174 19.3244 18.75 18.9259C20.1827 18.5274 21.9327 18.3281 24 18.3281C26.062 18.3281 27.8106 18.5274 29.246 18.9259C30.6813 19.3244 31.399 19.8489 31.399 20.4996C31.399 21.0915 30.7372 21.5893 29.4134 21.9932C28.0897 22.397 26.4658 22.6256 24.5417 22.679V26.5076H26.5241C26.7356 26.5076 26.9316 26.5591 27.1122 26.6622C27.2927 26.7653 27.4252 26.9157 27.5096 27.1134L28.6955 29.5909H27.5962L26.5962 27.5909H21.4038L20.4038 29.5909H19.3045Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="icon w-8 h-8 md:w-10 md:h-10 bg-gray-700 rounded-full flex justify-center items-center cursor-pointer">
+              <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Bars SVG -->
+                <path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="white" fill-opacity="0.2"/>
+                <path d="M27 29.5836V24.4971H29.5833V29.5836H27ZM22.7084 29.5836V18.417H25.2916V29.5836H22.7084ZM18.4167 29.5836V22.3369H21V29.5836H18.4167Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="icon w-8 h-8 md:w-10 md:h-10 bg-[#FF5634] rounded-full flex justify-center items-center cursor-pointer">
+              <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Book SVG -->
+                <path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="#FF5634"/>
+                <path d="M19.7456 25C19.9569 25 20.1354 24.9285 20.2812 24.7856C20.4271 24.6427 20.5 24.4656 20.5 24.2544C20.5 24.0431 20.4285 23.8646 20.2856 23.7188C20.1427 23.5729 19.9656 23.5 19.7544 23.5C19.5431 23.5 19.3646 23.5715 19.2188 23.7144C19.0729 23.8573 19 24.0344 19 24.2456C19 24.4569 19.0715 24.6354 19.2144 24.7812C19.3573 24.9271 19.5344 25 19.7456 25ZM19.7456 22.5C19.9569 22.5 20.1354 22.4285 20.2812 22.2856C20.4271 22.1427 20.5 21.9656 20.5 21.7544C20.5 21.5431 20.4285 21.3646 20.2856 21.2188C20.1427 21.0729 19.9656 21 19.7544 21C19.5431 21 19.3646 21.0715 19.2188 21.2144C19.0729 21.3573 19 21.5344 19 21.7456C19 21.9569 19.0715 22.1354 19.2144 22.2812C19.3573 22.4271 19.5344 22.5 19.7456 22.5ZM22 25H29V23.5H22V25ZM22 22.5H29V21H22V22.5ZM21 31V29H17.5C17.0875 29 16.7344 28.8531 16.4406 28.5592C16.1469 28.2653 16 27.9119 16 27.4992V18.4942C16 18.0814 16.1469 17.7292 16.4406 17.4375C16.7344 17.1458 17.0875 17 17.5 17H30.5C30.9125 17 31.2656 17.1469 31.5594 17.4408C31.8531 17.7347 32 18.0881 32 18.5008V27.5058C32 27.9186 31.8531 28.2708 31.5594 28.5625C31.2656 28.8542 30.9125 29 30.5 29H27V31H21Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="icon w-8 h-8 md:w-10 md:h-10 bg-gray-700 rounded-full flex justify-center items-center cursor-pointer">
+              <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Custom 'C' SVG -->
+                <path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="white" fill-opacity="0.2"/>
+                <path d="M25.75 21.9583V20.375C26.1806 20.2361 26.625 20.1354 27.0833 20.0729C27.5417 20.0104 28.0139 19.9792 28.5 19.9792C28.8194 19.9792 29.1424 19.9965 29.4688 20.0312C29.7951 20.066 30.1389 20.1181 30.5 20.1875V21.7292C30.0833 21.6319 29.7153 21.5625 29.3958 21.5208C29.0764 21.4792 28.7778 21.4583 28.5 21.4583C28.0278 21.4583 27.5625 21.5 27.1042 21.5833C26.6458 21.6667 26.1944 21.7917 25.75 21.9583ZM25.75 26.875V25.2917C26.1389 25.1667 26.5556 25.066 27 24.9896C27.4444 24.9132 27.9444 24.875 28.5 24.875C28.875 24.875 29.2257 24.8958 29.5521 24.9375C29.8785 24.9792 30.1944 25.0347 30.5 25.1042V26.6458C30.0833 26.5486 29.7153 26.4792 29.3958 26.4375C29.0764 26.3958 28.7778 26.375 28.5 26.375C28.0278 26.375 27.5625 26.4167 27.1042 26.5C26.6458 26.5833 26.1944 26.7083 25.75 26.875ZM25.75 24.4167V22.8333C26.1944 22.6944 26.6493 22.5903 27.1146 22.5208C27.5799 22.4514 28.0417 22.4167 28.5 22.4167C28.875 22.4167 29.2257 22.4375 29.5521 22.4792C29.8785 22.5208 30.1944 22.5764 30.5 22.6458V24.1875C30.1389 24.0903 29.7951 24.0208 29.4688 23.9792C29.1424 23.9375 28.8194 23.9167 28.5 23.9167C28.0556 23.9167 27.6076 23.9583 27.1562 24.0417C26.7049 24.125 26.2361 24.25 25.75 24.4167ZM24.75 28.875C25.3472 28.5972 25.9583 28.3819 26.5833 28.2292C27.2083 28.0764 27.8472 28 28.5 28C29.0139 28 29.5243 28.0312 30.0312 28.0938C30.5382 28.1562 31.0278 28.2917 31.5 28.5V19.0833C31.0139 18.9028 30.5208 18.7604 30.0208 18.6562C29.5208 18.5521 29.0139 18.5 28.5 18.5C27.8333 18.5 27.1875 18.5764 26.5625 18.7292C25.9375 18.8819 25.3333 19.1111 24.75 19.4167V28.875ZM24 31C23.3194 30.5556 22.6042 30.1944 21.8542 29.9167C21.1042 29.6389 20.3194 29.5 19.5 29.5C18.9722 29.5 18.4444 29.5521 17.9167 29.6562C17.3889 29.7604 16.8819 29.9167 16.3958 30.125C16.0625 30.2639 15.7465 30.2396 15.4479 30.0521C15.1493 29.8646 15 29.5903 15 29.2292V18.75C15 18.5556 15.0521 18.375 15.1562 18.2083C15.2604 18.0417 15.4028 17.9167 15.5833 17.8333C16.2083 17.5556 16.8472 17.3472 17.5 17.2083C18.1528 17.0694 18.8194 17 19.5 17C20.2917 17 21.066 17.0938 21.8229 17.2812C22.5799 17.4688 23.3056 17.75 24 18.125C24.7083 17.7639 25.4375 17.4861 26.1875 17.2917C26.9375 17.0972 27.7083 17 28.5 17C29.1806 17 29.8472 17.0694 30.5 17.2083C31.1528 17.3472 31.7917 17.5556 32.4167 17.8333C32.5972 17.9167 32.7431 18.0417 32.8542 18.2083C32.9653 18.375 33.0208 18.5556 33.0208 18.75V29.2292C33.0208 29.5764 32.9132 29.8542 32.6979 30.0625C32.4826 30.2708 32.2569 30.3194 32.0208 30.2083C31.4653 29.9583 30.8924 29.7778 30.3021 29.6667C29.7118 29.5556 29.1111 29.5 28.5 29.5C27.6806 29.5 26.8958 29.6389 26.1458 29.9167C25.3958 30.1944 24.6806 30.5556 24 31Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="icon w-8 h-8 md:w-10 md:h-10 bg-gray-700 rounded-full flex justify-center items-center cursor-pointer">
+              <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Last Icon SVG -->
+                <path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="white" fill-opacity="0.2"/>
+                <path d="M26 28V21.75C26 21.5375 26.0719 21.3594 26.2156 21.2156C26.3594 21.0719 26.5375 21 26.75 21H32.25C32.4625 21 32.6406 21.0719 32.7844 21.2156C32.9281 21.3594 33 21.5375 33 21.75V25.75C33 25.9625 32.9281 26.1406 32.7844 26.2844C32.6406 26.4281 32.4625 26.5 32.25 26.5H27.5L26 28ZM19.5 33C19.0875 33 18.7344 32.8531 18.4406 32.5594C18.1469 32.2656 18 31.9125 18 31.5V16.5C18 16.0875 18.1469 15.7344 18.4406 15.4406C18.7344 15.1469 19.0875 15 19.5 15H28.5C28.9125 15 29.2656 15.1469 29.5594 15.4406C29.8531 15.7344 30 16.0875 30 16.5V20H28.5V19H19.5V29H28.5V28H30V31.5C30 31.9125 29.8531 32.2656 29.5594 32.5594C29.2656 32.8531 28.9125 33 28.5 33H19.5Z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <div class="sidebar-footer w-full p-2 flex flex-row md:flex-col items-center gap-3 md:gap-5">
+            <div class="profile w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden">
+              <img src="img3.png" alt="Profile" class="w-full h-full object-cover" />
+            </div>
+            <div class="bell w-8 h-8 md:w-10 md:h-10 flex justify-center items-center cursor-pointer">
+              <svg width="24" height="24" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Bell SVG -->
+                <rect width="48" height="48" rx="24" fill="black" fill-opacity="0.1"/>
+                <path d="M18.4167 29.4041V28.3208H19.2564V22.9362C19.2564 21.7599 19.6266 20.7308 20.367 19.8489C21.1074 18.9669 22.0545 18.4335 23.2084 18.2487V17.2087C23.2084 16.9888 23.2852 16.8018 23.439 16.6479C23.5927 16.494 23.7794 16.417 23.9991 16.417C24.2187 16.417 24.4057 16.494 24.5601 16.6479C24.7145 16.8018 24.7916 16.9888 24.7916 17.2087V18.2487C25.9455 18.4335 26.8926 18.9669 27.633 19.8489C28.3734 20.7308 28.7436 21.7599 28.7436 22.9362V28.3208H29.5833V29.4041H18.4167ZM23.9942 31.7439C23.6241 31.7439 23.3093 31.6127 23.0497 31.3503C22.7901 31.088 22.6603 30.7726 22.6603 30.4041H25.3397C25.3397 30.7781 25.208 31.0948 24.9445 31.3545C24.681 31.6141 24.3642 31.7439 23.9942 31.7439Z" fill="black"/>
+                <rect x="35" y="1" width="10" height="10" rx="5" fill="#E10E0E" stroke="white" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="content-sections flex-1 flex flex-col lg:flex-row gap-2 sm:gap-5 overflow-y-auto bg-gradient-to-r from-gray-100 to-red-50 p-2 sm:p-4 rounded-3xl order-0 md:order-1">
+          <div class="section preparing bg-white rounded-3xl shadow-md p-2 sm:p-4 w-full lg:w-2/3 h-auto min-h-[300px] lg:min-h-[600px] overflow-y-auto">
+            <h2 class="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-4 text-center">Preparing</h2>
+            <div class="items-grid preparing grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 justify-center">
+              <div class="item-card w-full h-12 sm:h-16 bg-gray-200 rounded-lg flex justify-center items-center text-sm sm:text-base font-bold text-black hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-gray-200 rounded-lg flex justify-center items-center text-sm sm:text-base font-bold text-black hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-gray-200 rounded-lg flex justify-center items-center text-sm sm:text-base font-bold text-black hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-gray-200 rounded-lg flex justify-center items-center text-sm sm:text-base font-bold text-black hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-gray-200 rounded-lg flex justify-center items-center text-sm sm:text-base font-bold text-black hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-gray-200 rounded-lg flex justify-center items-center text-sm sm:text-base font-bold text-black hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-gray-200 rounded-lg flex justify-center items-center text-sm sm:text-base font-bold text-black hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-gray-200 rounded-lg flex justify-center items-center text-sm sm:text-base font-bold text-black hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-gray-200 rounded-lg flex justify-center items-center text-sm sm:text-base font-bold text-black hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-gray-200 rounded-lg flex justify-center items-center text-sm sm:text-base font-bold text-black hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-gray-200 rounded-lg flex justify-center items-center text-sm sm:text-base font-bold text-black hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-gray-200 rounded-lg flex justify-center items-center text-sm sm:text-base font-bold text-black hover:scale-105 transition-transform">3885</div>
+              <!-- Repeat as needed -->
+            </div>
+          </div>
+          <div class="section ready bg-white rounded-3xl shadow-md p-2 sm:p-4 w-full lg:w-1/3 h-auto min-h-[300px] lg:min-h-[600px] overflow-y-auto">
+            <h2 class="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-4 text-center">Ready</h2>
+            <div class="items-grid ready grid grid-cols-2 sm:grid-cols-3 gap-2 justify-center">
+              <div class="item-card w-full h-20 sm:h-32 bg-green-600 text-white rounded-lg flex justify-center items-center text-base sm:text-xl font-bold col-span-2 sm:col-span-3 hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-green-600 text-white rounded-lg flex justify-center items-center text-sm sm:text-base font-bold hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-green-600 text-white rounded-lg flex justify-center items-center text-sm sm:text-base font-bold hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-green-600 text-white rounded-lg flex justify-center items-center text-sm sm:text-base font-bold hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-green-600 text-white rounded-lg flex justify-center items-center text-sm sm:text-base font-bold hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-green-600 text-white rounded-lg flex justify-center items-center text-sm sm:text-base font-bold hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-green-600 text-white rounded-lg flex justify-center items-center text-sm sm:text-base font-bold hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-green-600 text-white rounded-lg flex justify-center items-center text-sm sm:text-base font-bold hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-green-600 text-white rounded-lg flex justify-center items-center text-sm sm:text-base font-bold hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-green-600 text-white rounded-lg flex justify-center items-center text-sm sm:text-base font-bold hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-green-600 text-white rounded-lg flex justify-center items-center text-sm sm:text-base font-bold hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-green-600 text-white rounded-lg flex justify-center items-center text-sm sm:text-base font-bold hover:scale-105 transition-transform">3885</div>
+              <div class="item-card w-full h-12 sm:h-16 bg-green-600 text-white rounded-lg flex justify-center items-center text-sm sm:text-base font-bold hover:scale-105 transition-transform">3885</div>
+              <!-- Repeat as needed -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const fullscreenBtn = document.querySelector('.fullscreen-btn');
+        const layoutContainer = document.querySelector('.layout-container');
+
+        fullscreenBtn.addEventListener('click', () => {
+          if (!document.fullscreenElement) {
+            layoutContainer.requestFullscreen().then(() => {
+              layoutContainer.classList.add('fullscreen');
+            });
+          } else {
+            document.exitFullscreen().then(() => {
+              layoutContainer.classList.remove('fullscreen');
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -4,113 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>McDonald's Order Status - RWD</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <!-- Assume Tailwind is included locally in your project -->
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body class="font-sans bg-gradient-to-br from-gray-100 to-pink-100 min-h-screen flex flex-col items-center p-5">
-    <div class="flex justify-between items-center bg-gray-200 p-3 rounded-lg w-full max-w-5xl mb-5">
-      <div class="flex items-center">
-        <i class="fas text-red-600 text-2xl mr-3">
-          <svg
-            width="60"
-            height="60"
-            viewBox="0 0 60 60"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <path
-              d="M0 16C0 7.16344 7.16344 0 16 0H44C52.8366 0 60 7.16344 60 16V44C60 52.8366 52.8366 60 44 60H16C7.16344 60 0 52.8366 0 44V16Z"
-              fill="url(#pattern0_433_51860)"
-            />
-            <defs>
-              <pattern
-                id="pattern0_433_51860"
-                patternContentUnits="objectBoundingBox"
-                width="1"
-                height="1"
-              >
-                <use
-                  xlink:href="#image0_433_51860"
-                  transform="translate(-0.0454545) scale(0.00363636)"
-                />
-              </pattern>
-              <image
-                id="image0_433_51860"
-                width="300"
-                height="275"
-                preserveAspectRatio="none"
-                xlink:href="data:image/png;syU6UdVQQUAWVYSgOKgCIQGQSUYUVmqrSjioAioAxLaUARUAQig4AyrMhMlXZUEVAElGEpDSgCikBkEFCGFZmp0o4qAoqAMiylAUVAEYgMAsqwIjNV2lFFQBFQhqU0oAgoApFBQBlWZKZKO6oIKALKsJQGFAFFIDIIKMOKzFRpRxUBRUAZltKAIqAI2C9ycAAAAR9JREFURAYBZViRmSrtqCKgCCjDUhpQBBSByCCgDCsyU6UdVQQUAWVYSgOKgCIQGQSUYUVmqrSjioAioAxLaUARUAQig4AyrMhMlXZUEVAElGEpDSgCikBkEFCGFZmp0o4qAoqAMiylAUVAEYgMAsqwIjNV2lFFQBFQhqU0oAgoApFBQBlWZKZKO6oIKALKsJQGFAFFIDIIKMOKzFRpRxUBRUAZltKAIqAIRAYBZViRmSrtqCKgCCjDUhpQBBSByCCgDCsyU6UdVQQUAWVYSgOKgCIQGQSUYUVmqrSjioAioAxLaUARUAQig4AyrMhMlXZUEVAElGEpDSgCikBkEFCGFZmp0o4qAoqAMiylAUVAEYgMAsqwIjNV2lFFQBH4/6Od4HXqvq5jAAAAAElFTkSuQmCC"
-              />
-            </defs>
-          </svg>
-        </i>
-        <span class="text-lg font-bold">McDonald's</span>
-      </div>
-      <div class="text-lg text-black">
-        <strong>15:03</strong>
-      </div>
-    </div>
+  <body class="bg-gradient-to-br from-gray-100 to-red-100 min-h-screen flex flex-col items-center p-5">
+    <div class="w-full max-w-5xl bg-gray-200 rounded-xl p-4 flex justify-between items-center shadow-md mb-5">
+  <div class="flex items-center space-x-2">
+    <img src="image 2.png" alt="McDonald's Logo" class="w-10 h-10 object-contain" />
+    <span class="text-lg font-bold">McDonald's</span>
+  </div>
+  <div class="text-lg font-bold">15:03</div>
+</div>
+
+
     <div class="w-full max-w-5xl flex gap-5">
-      <div class="flex-1 bg-white rounded-xl shadow-md p-5">
-        <h2 class="text-xl font-bold text-black mb-4 text-center">Preparing</h2>
-        <div class="grid grid-cols-5 gap-2 preparing">
-          <!-- 30 cards, leaving the last row empty for blank space -->
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <!-- Repeat for 23 more cards -->
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-gray-300 rounded-lg h-16 flex justify-center items-center text-base font-bold text-black transform hover:scale-105 transition-transform">3885</div>
-          <!-- Last row (6 cells) left empty -->
+      <!-- Preparing Section -->
+      <div class="bg-white rounded-2xl shadow-lg p-3 w-[700px] h-[600px] flex flex-col">
+        <h2 class="text-lg font-bold text-center mb-3">Preparing</h2>
+        <div class="grid grid-cols-5 gap-2 place-items-center">
+          <!-- 30 item cards -->
+          <div class="bg-gray-300 w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-gray-300 w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-gray-300 w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-gray-300 w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-gray-300 w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-gray-300 w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-gray-300 w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-gray-300 w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-gray-300 w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-gray-300 w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-gray-300 w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-gray-300 w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <!-- Repeat the above divs for more cards -->
         </div>
       </div>
-      <div class="flex-1 bg-white rounded-xl shadow-md p-5">
-        <h2 class="text-xl font-bold text-black mb-4 text-center">Ready</h2>
-        <div class="grid grid-cols-4 gap-2 ready">
-          <div class="bg-green-600 text-white rounded-lg h-24 flex justify-center items-center text-xl font-bold col-span-4 mb-2 transform hover:scale-105 transition-transform">3885</div>
-          <!-- Remaining 19 cards in rows of 4 -->
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
-          <div class="bg-green-600 text-white rounded-lg h-16 flex justify-center items-center text-base font-bold transform hover:scale-105 transition-transform">3885</div>
+
+      <!-- Ready Section -->
+      <div class="bg-white rounded-2xl shadow-lg p-3 w-[383px] h-[600px] flex flex-col">
+        <h2 class="text-lg font-bold text-center mb-3">Ready</h2>
+        <div class="grid grid-cols-3 gap-2 place-items-center">
+          <!-- First large item -->
+          <div class="bg-green-500 text-white w-[334px] h-[128px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition col-span-3">3885</div>
+          <!-- Other ready items -->
+          <div class="bg-green-500 text-white w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-green-500 text-white w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-green-500 text-white w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-green-500 text-white w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-green-500 text-white w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-green-500 text-white w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-green-500 text-white w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-green-500 text-white w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-green-500 text-white w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-green-500 text-white w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          <div class="bg-green-500 text-white w-[106px] h-[64px] flex justify-center items-center text-lg font-bold rounded-lg hover:scale-105 transition">3885</div>
+          
+          <!-- Repeat the above divs for more cards -->
         </div>
       </div>
     </div>
