@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Items - Grid Exercise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to your locally built Tailwind CSS file -->
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="font-lato bg-white flex flex-col items-center min-h-screen p-5 md:p-5 sm:p-0">
+    <div class="header text-xl sm:text-lg md:text-[22px] text-gray-600 mb-10 sm:mb-5 md:mb-10 text-center w-full sm:p-[5px_10px]">Grid Exercises :: Card</div> 
+    <div class="popular-items bg-gray-100 rounded-2xl shadow-lg p-5 sm:p-1 md:p-[15px] w-full max-w-[430px] sm:max-w-full md:max-w-[430px] sm:rounded-md sm:shadow-md">
+        <h2 class="text-lg sm:text-sm md:text-xl font-medium text-black mb-5 sm:mb-1 md:mb-5 tracking-tighter sm:p-[0_5px]">Popular Items</h2>
+        <div class="items-grid grid grid-cols-2 grid-rows-3 gap-4 sm:gap-1 md:gap-[10px]">
+            <div class="item-card bg-white rounded-lg shadow-md p-4 sm:p-1 md:p-[10px] text-left w-full h-[140px] sm:h-20 md:h-[120px] flex flex-col sm:rounded-md">
+                <div class="item-name text-base sm:text-xs md:text-sm font-bold text-black mb-1 sm:mb-0.5 md:mb-1 max-w-full break-words pt-2.5 sm:pt-1 md:pt-2">Double Chicken Burger + French fries</div>
+                <div class="item-orders text-sm sm:text-[10px] md:text-xs text-gray-800 max-w-full break-words pb-2.5 sm:pb-1 md:pb-2 mt-auto">Order: <strong>88</strong></div>
+            </div>
+            <div class="item-card bg-white rounded-lg shadow-md p-4 sm:p-1 md:p-[10px] text-left w-full h-[140px] sm:h-20 md:h-[120px] flex flex-col sm:rounded-md">
+                <div class="item-name text-base sm:text-xs md:text-sm font-bold text-black mb-1 sm:mb-0.5 md:mb-1 max-w-full break-words pt-2.5 sm:pt-1 md:pt-2">Mexican Burger</div>
+                <div class="item-orders text-sm sm:text-[10px] md:text-xs text-gray-800 max-w-full break-words pb-2.5 sm:pb-1 md:pb-2 mt-auto">Order: <strong>74</strong></div>
+            </div>
+            <div class="item-card bg-white rounded-lg shadow-md p-4 sm:p-1 md:p-[10px] text-left w-full h-[140px] sm:h-20 md:h-[120px] flex flex-col sm:rounded-md">
+                <div class="item-name text-base sm:text-xs md:text-sm font-bold text-black mb-1 sm:mb-0.5 md:mb-1 max-w-full break-words pt-2.5 sm:pt-1 md:pt-2">Double Cheese</div>
+                <div class="item-orders text-sm sm:text-[10px] md:text-xs text-gray-800 max-w-full break-words pb-2.5 sm:pb-1 md:pb-2 mt-auto">Order: <strong>56</strong></div>
+            </div>
+            <div class="item-card bg-white rounded-lg shadow-md p-4 sm:p-1 md:p-[10px] text-left w-full h-[140px] sm:h-20 md:h-[120px] flex flex-col sm:rounded-md">
+                <div class="item-name text-base sm:text-xs md:text-sm font-bold text-black mb-1 sm:mb-0.5 md:mb-1 max-w-full break-words pt-2.5 sm:pt-1 md:pt-2">Double Spicy Bean Burger</div>
+                <div class="item-orders text-sm sm:text-[10px] md:text-xs text-gray-800 max-w-full break-words pb-2.5 sm:pb-1 md:pb-2 mt-auto">Order: <strong>41</strong></div>
+            </div>
+            <div class="item-card bg-white rounded-lg shadow-md p-4 sm:p-1 md:p-[10px] text-left w-full h-[140px] sm:h-20 md:h-[120px] flex flex-col sm:rounded-md">
+                <div class="item-name text-base sm:text-xs md:text-sm font-bold text-black mb-1 sm:mb-0.5 md:mb-1 max-w-full break-words pt-2.5 sm:pt-1 md:pt-2">Potato Gems</div>
+                <div class="item-orders text-sm sm:text-[10px] md:text-xs text-gray-800 max-w-full break-words pb-2.5 sm:pb-1 md:pb-2 mt-auto">Order: <strong>38</strong></div>
+            </div>
+            <div class="item-card bg-white rounded-lg shadow-md p-4 sm:p-1 md:p-[10px] text-left w-full h-[140px] sm:h-20 md:h-[120px] flex flex-col sm:rounded-md">
+                <div class="item-name text-base sm:text-xs md:text-sm font-bold text-black mb-1 sm:mb-0.5 md:mb-1 max-w-full break-words pt-2.5 sm:pt-1 md:pt-2">Beer</div>
+                <div class="item-orders text-sm sm:text-[10px] md:text-xs text-gray-800 max-w-full break-words pb-2.5 sm:pb-1 md:pb-2 mt-auto">Order: <strong>32</strong></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
