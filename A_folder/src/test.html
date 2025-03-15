@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="w-full light translated-ltr" style="color-scheme: light;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+    <title>Service Panels</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex min-h-screen w-full flex-col flex-wrap bg-cover bg-no-repeat antialiased font-dm-sans">
+    <!-- Notifications Region -->
+    <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events:none">
+        <ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol>
+    </div>
+
+    <!-- Main Content -->
+    <div class="min-h-screen w-full flex flex-col lg:flex-row p-2">
+        <!-- Left Section (Promotional) -->
+        <div class="hidden lg:flex lg:w-[40%] max-w-[480px] relative rounded-[30px] overflow-hidden">
+            <div class="absolute inset-0 bg-[url('../assets/orderific.png')] bg-cover bg-top bg-no-repeat"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="relative flex flex-col min-h-full w-full">
+                <div class="p-6">
+                    <div class="flex items-center space-x-2">
+                        <img alt="Logo" loading="lazy" width="47" height="35" decoding="async" style="color:transparent" src="../assets/Group.png">
+                        <span class="text-[24px] leading-[32px] tracking-[-0.02em] font-bold text-white">Orderific</span>
+                    </div>
+                </div>
+                <div class="mt-auto p-6 text-white">
+                    <h1 class="text-[48px] md:text-[56px] lg:text-[64px] leading-[56px] tracking-[-0.03em] font-bold mb-6">Service Panel</h1>
+                    <p class="text-[14px] md:text-[16px] lg:text-[16px] leading-[24px] tracking-[-0.01em] font-normal">Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section (Dynamic Content) -->
+        <div class="flex flex-col w-full lg:w-[60%] min-h-[inherit] lg:min-h-0">
+            <!-- Mobile Header -->
+            <div class="lg:hidden flex flex-col items-center pt-4">
+                <div class="flex items-center space-x-2">
+                    <img alt="Logo" loading="lazy" width="53.2" height="38.97" decoding="async" style="color:transparent" src="../assets/Logo-Orange-Black-2 1.png">
+                    <span class="text-[20px] md:text-[22px] lg:text-[24px] leading-[32px] tracking-[-0.02em] font-bold text-orange-500">Orderific</span>
+                </div>
+                <h2 class="text-[24px] md:text-[28px] lg:text-[32px] leading-[40px] tracking-[-0.03em] font-bold text-black mt-2">Service Panel</h2>
+            </div>
+
+            <!-- Login Form -->
+            <div class="flex-1 flex flex-col justify-center w-full max-w-[360px] mx-auto">
+                <div class="text-center mb-4">
+                    <h1 class="text-[24px] md:text-[28px] lg:text-[32px] leading-[40px] tracking-[-0.03em] font-bold mb-2">Welcome Back</h1>
+                    <p class="text-[14px] md:text-[16px] lg:text-[16px] leading-[24px] tracking-[-0.01em] font-normal text-black/60">Manage, streamline, and thrive effortlessly.</p>
+                </div>
+
+                <!-- OTP Screen -->
+                <div id="otpScreen" class="w-full">
+                    <div class="space-y-2">
+                        <label class="text-[12px] md:text-[13px] lg:text-[13px] leading-[16px] font-bold text-black/60 pl-4 block">Enter 6 digit pin</label>
+                        <div class="flex space-x-2" id="otpInput">
+                            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp1">
+                            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp2">
+                            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp3">
+                            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp4">
+                            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp5">
+                            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp6">
+                        </div>
+                    </div>
+                    <button class="inline-flex items-center justify-center rounded-[30px] transition-colors hover:bg-black/10 h-[48px] text-[14px] md:text-[16px] lg:text-[16px] leading-[24px] tracking-[-0.01em] font-bold w-full py-3 px-4 mt-4 bg-black text-white" onclick="verifyOTP()">Sign In</button>
+                </div>
+
+                <!-- Email/Password Screen -->
+                <div id="emailScreen" class="w-full hidden">
+                    <form class="w-full space-y-4">
+                        <div class="space-y-2">
+                            <label class="text-[12px] md:text-[13px] lg:text-[13px] leading-[16px] font-bold text-black/60 pl-4 block">Email</label>
+                            <div class="relative w-full">
+                                <input type="email" class="block w-full h-[48px] rounded-[30px] px-4 border border-gray-200 bg-white text-black placeholder:text-gray-400 focus:outline-none focus:border-black/20 focus-visible:outline-none focus-visible:border-black/20" placeholder="Enter email address" value="" id="emailInput">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[12px] md:text-[13px] lg:text-[13px] leading-[16px] font-bold text-black/60 pl-4 block">Password</label>
+                            <div class="relative">
+                                <input type="password" class="block w-full h-[48px] rounded-[30px] px-4 border border-gray-200 bg-white text-black placeholder:text-gray-400 focus:outline-none focus:border-black/20 focus-visible:outline-none focus-visible:border-black/20" placeholder="Password" value="" id="passwordInput">
+                                <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" onclick="togglePasswordVisibility()">
+                                    <img id="passwordToggleIcon" alt="Toggle password visibility" loading="lazy" width="20" height="20" decoding="async" class="opacity-60 hover:opacity-100 transition-opacity" style="color:transparent" src="../assets/Icon.png">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <input type="checkbox" class="h-5 w-5 cursor-pointer border appearance-none rounded-md bg-gray-100 border-gray-200 checked:bg-green-600 checked:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-600/20">
+                                <label class="text-[14px] md:text-[16px] lg:text-[16px] leading-[24px] tracking-[-0.01em] font-normal text-gray-700 ml-2">Remember me</label>
+                            </div>
+                            <button type="button" class="font-dm-sans font-bold text-black underline" onclick="goBackToOTP()">Login with Code</button>
+                        </div>
+                        <button type="button" class="inline-flex items-center justify-center rounded-[30px] transition-colors hover:bg-black/10 h-[48px] text-[14px] md:text-[16px] lg:text-[16px] leading-[24px] tracking-[-0.01em] font-bold w-full py-3 px-4" id="signInButton" onclick="verifyCredentials()">Sign In</button>
+                        <div id="errorContainer" class="flex items-center justify-center gap-2 hidden">
+                            <img src="../assets/emergency_home.svg" alt="emergency_home" class="w-6 h-6">
+                            <p id="errorMessage" class="text-red-500 text-[14px] leading-[24px] tracking-[-0.01em] font-normal"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

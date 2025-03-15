@@ -23,7 +23,48 @@
       }
     </style>
 
+    <script>
+      function showConfirmation() {
+        document.getElementById('confirmationModal').classList.remove('hidden');
+        const acceptBtn = document.getElementById('acceptButton');
+        acceptBtn.classList.add('bg-black', 'text-white', 'hover:bg-gray-900');
+      }
     
+      function confirmAction() {
+        const acceptBtn = document.getElementById('acceptButton');
+        acceptBtn.innerHTML = `
+          <div class="flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Cash Transfer Confirmed
+          </div>
+        `;
+        acceptBtn.classList.remove(
+          'bg-black', 
+          'hover:bg-gray-800',
+          'hover:bg-gray-400' // Remove original hover effect
+        );
+        acceptBtn.classList.add(
+          'bg-white',
+          'text-green-600',
+          'border-2',
+          'border-green-500',
+          'hover:bg-white', // Maintain white background on hover
+          'cursor-default' // Change cursor to default
+        );
+        acceptBtn.disabled = true;
+        closeModal();
+      }
+        
+      function closeModal() {
+        document.getElementById('confirmationModal').classList.add('hidden');
+        const acceptBtn = document.getElementById('acceptButton');
+        if (!acceptBtn.disabled) {
+          acceptBtn.classList.remove('bg-black', 'text-white');
+        }
+      }
+    </script>
   </head>
   <body class="custom-gradient h-auto gap-0 top-[83px] left-[3835px] gap-0">
     <div class="flex flex-col md:flex-row">
@@ -256,7 +297,7 @@
         <img src="./assessts/Customer Display (1).png" alt="">
       </div>
       <div class="w-10 h-10 bg-[var(--Background-Brand-Orange-100)] rounded-full relative flex items-center justify-center">
-        <img src="./assessts/Customer Display (2).png" alt="">
+        <img src="./assessts/Item Icon.png" alt="">
         <span class="absolute -top-1 -right-1 bg-[var(--Background-Semantic-Red-100)] text-white w-4 h-4 min-w-4 gap-0 rounded-full pt-0 pr-1 pb-0 pl-1 border-2 border-black text-xs flex items-center justify-center">1</span>
       </div>
     </div>
@@ -265,15 +306,18 @@
       <div class="bg-white rounded-3xl w-full max-w-[363px] min-h-[224px] relative p-6">
         <!-- Close Button -->
         <button onclick="closeModal()" class="absolute top-5 right-5 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow text-xl font-bold">
-          ×
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="black"/>
+</svg>
+
         </button>
         
         <!-- Modal Content -->
-        <div class="flex flex-col justify-between h-full">
+        <div class="flex flex-col justify-between">
           <div class="pt-8">
             <h3 class="text-xl font-bold mb-4">Collect Confirmation</h3>
             <p class="text-gray-600 text-sm">
-              Do you receive the sum of <strong class="font-bold">$86.60</strong> from 
+              Do you confirm the receipt of the sum of <strong class="font-bold">$86.60</strong> from 
               <strong class="font-bold">Nasser Alsubai</strong>?
             </p>
           </div>
@@ -284,6 +328,5 @@
         </div>
       </div>
     </div>
-  
-
-<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><div id="shadow-host-companion"></div></div></body></html>
+  </body>
+  </html>
