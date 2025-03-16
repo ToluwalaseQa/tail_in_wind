@@ -6,221 +6,7 @@
     <title>Menu Management</title>
     <!-- Include Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Custom styles for toggle switch */
-      .toggle-switch {
-        position: relative;
-        display: inline-block;
-        width: 40px;
-        height: 20px;
-      }
-      .toggle-switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-      }
-      .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        transition: 0.4s;
-        border-radius: 20px;
-      }
-      .slider:before {
-        position: absolute;
-        content: '';
-        height: 16px;
-        width: 16px;
-        left: 2px;
-        bottom: 2px;
-        background-color: white;
-        transition: 0.4s;
-        border-radius: 50%;
-      }
-      input:checked + .slider {
-        background-color: #4caf50;
-      }
-      input:checked + .slider:before {
-        transform: translateX(20px);
-      }
-
-      /* Custom Tailwind colors and styles */
-      .bg-white-100 {
-        background-color: #ffffff;
-      }
-      .bg-white-20 {
-        background-color: #f5f5f5;
-      }
-      .bg-black-100 {
-        background-color: #212121;
-      }
-      .bg-black-10 {
-        background-color: #e0e0e0;
-      }
-      .text-icon-white-100 {
-        color: #ffffff;
-      }
-      .text-icon-black-100 {
-        color: #212121;
-      }
-      .bg-brand {
-        background-color: #ff6200;
-      }
-      .hover\:outline-black-20:hover {
-        outline: 1px solid #212121;
-      }
-      .rounded-6 {
-        border-radius: 24px;
-      }
-
-      /* Custom gradient background for body */
-      body {
-        background: linear-gradient(67.75deg, #ffffff 19.18%, #ffebe7 75.31%);
-      }
-
-      /* Custom styles for sections */
-      .header-section {
-        background: linear-gradient(90deg, #fff5f5, #ffe0e0);
-        border-radius: 12px;
-        padding: 8px 16px;
-        margin-bottom: 16px;
-        cursor: pointer;
-      }
-      .header-section:hover {
-        background: linear-gradient(90deg, #ffe0e0, #fff5f5);
-      }
-      .meal-tabs-section,
-      .category-tabs-section {
-        background: linear-gradient(90deg, #fff5f5, #ffe0e0);
-        border-radius: 12px;
-        padding: 8px;
-        margin-bottom: 16px;
-      }
-      .category-section {
-        background: linear-gradient(90deg, #fff5f5, #ffe0e0);
-        border-radius: 12px;
-        padding: 8px 16px;
-        margin-bottom: 16px;
-      }
-
-      /* Ensure tabs have consistent spacing and rounded edges */
-      .meal-tab,
-      .category-tab {
-        transition: all 0.3s ease;
-      }
-      .meal-tab.active,
-      .category-tab.active {
-        background-color: #000;
-        color: #fff;
-      }
-
-      /* Modal styles */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-      }
-      .modal-content {
-        background-color: #fff;
-        margin: 15% auto;
-        padding: 20px;
-        border-radius: 12px;
-        width: 90%;
-        max-width: 300px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        position: relative;
-      }
-      .modal-content h2 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      .modal-content p {
-        font-size: 0.875rem;
-        margin-bottom: 15px;
-      }
-      .modal-content .option-label {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        font-size: 0.875rem;
-      }
-      .modal-content .radio-container {
-        position: relative;
-        width: 28px;
-        height: 28px;
-      }
-      .modal-content input[type="radio"] {
-        opacity: 0;
-        width: 28px;
-        height: 28px;
-        position: absolute;
-        cursor: pointer;
-      }
-      .modal-content .radio-container::before {
-        content: '';
-        position: absolute;
-        width: 28px;
-        height: 28px;
-        background: url('data:image/svg+xml;utf8,<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="28" rx="14" fill="black" fill-opacity="0.1"/></svg>')
-          no-repeat center center;
-        background-size: contain;
-      }
-      .modal-content input[type="radio"]:checked + .radio-container::before {
-        background: url('data:image/svg+xml;utf8,<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="28" rx="14" fill="black" fill-opacity="0.1"/><path d="M11 14.5L14 17.5L19 12.5" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
-          no-repeat center center;
-        background-size: contain;
-      }
-      .modal-content #otherReasonInput {
-        display: none;
-        width: 100%;
-        padding: 8px;
-        margin-top: 5px;
-        border: 1px solid #e0e0e0;
-        border-radius: 4px;
-        font-size: 0.875rem;
-      }
-      .modal-content button {
-        width: 100%;
-        padding: 10px;
-        background-color: #212121;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 0.875rem;
-        cursor: pointer;
-        margin-top: 10px;
-        transition: opacity 0.3s;
-      }
-      .modal-content button:disabled {
-        opacity: 0.6;
-        cursor: not-allowed;
-      }
-      .modal-content button:hover:not(:disabled) {
-        background-color: #333;
-      }
-      .close {
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        font-size: 1.5rem;
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 0;
-        line-height: 1;
-      }
-    </style>
+    <link rel="stylesheet" href="../dist/menu.css">
   </head>
   <body class="flex min-h-screen font-sans">
     <!-- Sidebar -->
@@ -265,7 +51,7 @@
           </a>
         </div>
         <div class="relative">
-          <a href="/en/live-counter">
+          <a href="../../004/otp.html">
             <button
               class="inline-flex items-center justify-center transition-colors hover:outline-black-20 hover:outline disabled:bg-black-5 disabled:text-black-40 disabled:outline-none h-[48px] bg-white-5 hover:outline-0 min-w-[48px] rounded-full text-[12px] md:text-[14px] lg:text-[14px] leading-[16px] font-bold"
             >
@@ -286,7 +72,7 @@
           </a>
         </div>
         <div class="relative">
-          <a href="/en/dashboard">
+          <a href="../../004/otp.html">
             <button
               class="inline-flex items-center justify-center transition-colors hover:outline-black-20 hover:outline disabled:bg-black-5 disabled:text-black-40 disabled:outline-none h-[48px] hover:outline-0 bg-brand min-w-[48px] rounded-full text-[12px] md:text-[14px] lg:text-[14px] leading-[16px] font-bold"
             >
@@ -306,8 +92,9 @@
             </button>
           </a>
         </div>
+        <!-- Order Status -->
         <div class="relative">
-          <a href="/en/order-status">
+          <a href="../../004/otp.html">
             <button
               class="inline-flex items-center justify-center transition-colors hover:outline-black-20 hover:outline disabled:bg-black-5 disabled:text-black-40 disabled:outline-none h-[48px] bg-white-5 hover:outline-0 min-w-[48px] rounded-full text-[12px] md:text-[14px] lg:text-[14px] leading-[16px] font-bold"
             >
@@ -327,8 +114,9 @@
             </button>
           </a>
         </div>
+        <!-- Menu MGT -->
         <div class="relative">
-          <a href="../A_folder/src/menu.html">
+          <a href="../../004/otp.html">
             <button
               class="inline-flex items-center justify-center transition-colors hover:outline-black-20 hover:outline disabled:bg-black-5 disabled:text-black-40 disabled:outline-none h-[48px] bg-white-5 hover:outline-0 min-w-[48px] rounded-full text-[12px] md:text-[14px] lg:text-[14px] leading-[16px] font-bold"
             >
@@ -348,8 +136,9 @@
             </button>
           </a>
         </div>
+        <!-- OTP Confirmation -->
         <div class="relative">
-          <a href="/en/otp-confirmation">
+          <a href="../../004/otp.html">
             <button
               class="inline-flex items-center justify-center transition-colors hover:outline-black-20 hover:outline disabled:bg-black-5 disabled:text-black-40 disabled:outline-none h-[48px] bg-white-5 hover:outline-0 min-w-[48px] rounded-full text-[12px] md:text-[14px] lg:text-[14px] leading-[16px] font-bold"
             >
@@ -390,8 +179,9 @@
               src="../assets/img3.png"
             />
           </button>
+          <!-- notifications -->
         </a>
-        <a href="/en/notifications">
+        <a href="../../004/otp.html">
           <button
             class="inline-flex items-center justify-center transition-colors hover:outline-black-20 hover:outline disabled:bg-black-5 disabled:text-black-40 disabled:outline-none h-[48px] bg-black-10 hover:outline-0 min-w-[48px] rounded-full text-[12px] md:text-[14px] lg:text-[14px] leading-[16px] font-bold"
           >
@@ -581,348 +371,6 @@
     </main>
 
     <!-- JavaScript for dynamic updates -->
-    <script>
-      // Data structure for meal types, categories, and items
-      const menuData = {
-        breakfast: {
-          categories: [
-            { name: "Kebab", count: 16, active: true },
-            { name: "Burgers", count: 12, active: true },
-            { name: "Pizza", count: 8, active: true },
-            { name: "Soups", count: 7, active: true },
-            { name: "Salads", count: 11, active: true },
-            { name: "Pasta", count: 3, active: true },
-            { name: "Desserts", count: 4, active: true },
-            { name: "Sandwiches", count: 12, active: true },
-            { name: "Drinks", count: 5, active: true },
-            { name: "Seafood", count: 5, active: true },
-            { name: "Mexic", count: 0, active: true }
-          ],
-          items: {
-            Kebab: [
-              { name: "Chicken Kebab", price: 15.00, active: true },
-              { name: "Lamb Kebab", price: 18.00, active: false },
-              { name: "Beef Kebab", price: 17.50, active: true }
-            ],
-            Burgers: [
-              { name: "Double Cheese Burger", price: 22.50, active: true },
-              { name: "Veggie Burger", price: 18.00, active: false },
-              { name: "Chicken Burger", price: 20.00, active: true }
-            ],
-            Pizza: [
-              { name: "Margherita", price: 12.00, active: true },
-              { name: "Pepperoni", price: 14.00, active: true }
-            ],
-            Soups: [
-              { name: "Tomato Soup", price: 8.00, active: true }
-            ],
-            Salads: [
-              { name: "Caesar Salad", price: 10.00, active: true }
-            ],
-            Pasta: [
-              { name: "Spaghetti", price: 12.00, active: true }
-            ],
-            Desserts: [
-              { name: "Pancakes", price: 8.00, active: true }
-            ],
-            Sandwiches: [
-              { name: "Egg Sandwich", price: 9.00, active: true }
-            ],
-            Drinks: [
-              { name: "Orange Juice", price: 4.00, active: true }
-            ],
-            Seafood: [
-              { name: "Fish Fillet", price: 15.00, active: true }
-            ],
-            Mexic: []
-          }
-        },
-        lunch: {
-          categories: [
-            { name: "Burgers", count: 10, active: true },
-            { name: "Pizza", count: 6, active: true },
-            { name: "Salads", count: 8, active: true },
-            { name: "Pasta", count: 5, active: true },
-            { name: "Sandwiches", count: 9, active: true }
-          ],
-          items: {
-            Burgers: [
-              { name: "Cheeseburger", price: 20.00, active: true },
-              { name: "BBQ Burger", price: 22.00, active: true }
-            ],
-            Pizza: [
-              { name: "Hawaiian", price: 13.00, active: true }
-            ],
-            Salads: [
-              { name: "Greek Salad", price: 11.00, active: true }
-            ],
-            Pasta: [
-              { name: "Lasagna", price: 15.00, active: true }
-            ],
-            Sandwiches: [
-              { name: "Turkey Sandwich", price: 10.00, active: true }
-            ]
-          }
-        },
-        dinner: {
-          categories: [
-            { name: "Seafood", count: 7, active: true },
-            { name: "Pasta", count: 4, active: true },
-            { name: "Desserts", count: 6, active: true },
-            { name: "Drinks", count: 3, active: true }
-          ],
-          items: {
-            Seafood: [
-              { name: "Grilled Salmon", price: 25.00, active: true },
-              { name: "Shrimp Scampi", price: 22.00, active: true }
-            ],
-            Pasta: [
-              { name: "Fettuccine Alfredo", price: 16.00, active: true }
-            ],
-            Desserts: [
-              { name: "Tiramisu", price: 9.00, active: true }
-            ],
-            Drinks: [
-              { name: "Red Wine", price: 8.00, active: true }
-            ]
-          }
-        }
-      };
-
-      let currentMeal = "breakfast";
-      let currentCategory = menuData[currentMeal].categories[0].name;
-      let currentItem = null;
-      let currentCategoryToggle = null;
-
-      // Function to reset the view when header is clicked
-      function resetView() {
-        selectMeal("breakfast");
-        currentCategory = menuData["breakfast"].categories[0].name;
-        updateCategoryTabs();
-        updateCategorySection();
-        updateGridSection();
-      }
-
-      // Function to update meal tabs
-      function selectMeal(meal) {
-        currentMeal = meal;
-        currentCategory = menuData[meal].categories[0].name;
-
-        document.querySelectorAll(".meal-tab").forEach(tab => {
-          if (tab.dataset.meal === meal) {
-            tab.classList.remove("bg-gray-200", "text-black");
-            tab.classList.add("bg-black", "text-white", "active");
-          } else {
-            tab.classList.remove("bg-black", "text-white", "active");
-            tab.classList.add("bg-gray-200", "text-black");
-          }
-        });
-
-        updateCategoryTabs();
-        updateCategorySection();
-        updateGridSection();
-      }
-
-      // Function to update category tabs
-      function updateCategoryTabs() {
-        const categoryTabs = document.getElementById("category-tabs");
-        categoryTabs.innerHTML = "";
-        menuData[currentMeal].categories.forEach(category => {
-          const button = document.createElement("button");
-          button.className =
-            category.name === currentCategory
-              ? "category-tab bg-black text-white px-4 py-2 rounded-lg flex items-center active"
-              : "category-tab bg-gray-200 text-black px-4 py-2 rounded-lg flex items-center";
-          button.innerHTML = `
-            ${category.name}
-            <span class="ml-2 bg-white text-black rounded-full h-5 w-5 flex items-center justify-center">${category.count}</span>
-          `;
-          button.onclick = () => selectCategory(category.name);
-          categoryTabs.appendChild(button);
-        });
-      }
-
-      // Function to select a category
-      function selectCategory(category) {
-        currentCategory = category;
-        updateCategoryTabs();
-        updateCategorySection();
-        updateGridSection();
-      }
-
-      // Function to update category section
-      function updateCategorySection() {
-        const categoryTitle = document.getElementById("category-title");
-        const category = menuData[currentMeal].categories.find(
-          cat => cat.name === currentCategory
-        );
-        const count = category.count;
-        categoryTitle.innerHTML = `
-          Whole "${currentCategory}" Category <span class="text-gray-500">${count} Items</span>
-        `;
-        const categoryToggle = document.getElementById("categoryToggle");
-        const categoryStatus = document.getElementById("category-status");
-        categoryToggle.checked = category.active;
-        categoryStatus.textContent = category.active ? "Active" : "Inactive";
-        categoryStatus.className = category.active
-          ? "ml-2 text-green-500"
-          : "ml-2 text-gray-500";
-      }
-
-      // Function to update grid section
-      function updateGridSection() {
-        const gridSection = document.getElementById("grid-section");
-        gridSection.innerHTML = "";
-        const category = menuData[currentMeal].categories.find(
-          cat => cat.name === currentCategory
-        );
-        if (!category.active) {
-          gridSection.innerHTML = "<p class='text-center text-gray-500'>This category is inactive.</p>";
-          return;
-        }
-        const items = menuData[currentMeal].items[currentCategory] || [];
-        const targetCount = category.count;
-
-        // Populate grid items up to the target count
-        for (let i = 0; i < targetCount; i++) {
-          const item = items[i % items.length] || { name: `Item ${i + 1}`, price: 10.00, active: true };
-          const div = document.createElement("div");
-          div.className = "bg-white p-4 rounded-lg shadow";
-          div.innerHTML = `
-            <h3 class="text-lg font-semibold">${item.name}</h3>
-            <p class="text-gray-500">$${item.price.toFixed(2)}</p>
-            <div class="flex items-center mt-2">
-              <label class="toggle-switch">
-                <input type="checkbox" ${item.active ? "checked" : ""} onchange="toggleItemStatus('${item.name}', this.checked)" />
-                <span class="slider"></span>
-              </label>
-              <span class="ml-2 ${item.active ? "text-green-500" : "text-gray-500"}">
-                ${item.active ? "Active" : "Inactive"}
-              </span>
-            </div>
-          `;
-          gridSection.appendChild(div);
-        }
-      }
-
-      // Function to handle category toggle status
-      function toggleCategoryStatus(isActive) {
-        const category = menuData[currentMeal].categories.find(
-          cat => cat.name === currentCategory
-        );
-        if (!isActive) {
-          currentCategoryToggle = category;
-          const modal = document.getElementById("toggleModal");
-          const modalTitle = document.getElementById("modalTitle");
-          const modalSubtitle = document.getElementById("modalSubtitle");
-          modalTitle.textContent = `Inactivating "${currentCategory}" Category`;
-          modalSubtitle.textContent = `What's the reason of inactivating the "${currentCategory}" category?`;
-          modal.style.display = "block";
-        } else {
-          category.active = true;
-          updateCategorySection();
-          updateGridSection();
-        }
-      }
-
-      // Function to handle item toggle status
-      function toggleItemStatus(itemName, isActive) {
-        const item = menuData[currentMeal].items[currentCategory].find(
-          i => i.name === itemName
-        );
-        if (!isActive) {
-          currentItem = item;
-          const modal = document.getElementById("toggleModal");
-          const modalTitle = document.getElementById("modalTitle");
-          const modalSubtitle = document.getElementById("modalSubtitle");
-          modalTitle.textContent = `Inactivating ${itemName}`;
-          modalSubtitle.textContent = `What's the reason of inactivating "${itemName}"?`;
-          modal.style.display = "block";
-        } else {
-          item.active = true;
-          updateGridSection();
-        }
-      }
-
-      // Function to toggle the "Other" input field visibility
-      function toggleOtherInput() {
-        const otherInput = document.getElementById("otherReasonInput");
-        const selectedReason = document.querySelector('input[name="reason"]:checked');
-        if (selectedReason && selectedReason.value === "other") {
-          otherInput.style.display = "block";
-        } else {
-          otherInput.style.display = "none";
-          otherInput.value = ""; // Clear the input when hidden
-        }
-      }
-
-      // Function to close the modal
-      function closeModal() {
-        const modal = document.getElementById("toggleModal");
-        modal.style.display = "none";
-        // Reset the form
-        document.getElementById("reasonForm").reset();
-        // Hide the other reason input
-        document.getElementById("otherReasonInput").style.display = "none";
-        // Revert toggle states if modal is closed without saving
-        if (currentItem) {
-          currentItem.active = true;
-          updateGridSection();
-          currentItem = null;
-        }
-        if (currentCategoryToggle) {
-          currentCategoryToggle.active = true;
-          updateCategorySection();
-          updateGridSection();
-          currentCategoryToggle = null;
-        }
-      }
-
-      // Function to save the reason and update the status
-      function saveReason() {
-        const saveButton = document.getElementById("saveButton");
-        const form = document.getElementById("reasonForm");
-        const reason = form.querySelector('input[name="reason"]:checked');
-        const otherReason = document.getElementById("otherReasonInput").value.trim();
-
-        if (!reason) {
-          alert("Please select a reason.");
-          return;
-        }
-
-        if (reason.value === "other" && !otherReason) {
-          alert("Please provide a reason in the text field.");
-          return;
-        }
-
-        // Change button text to "Saving..." and disable it
-        saveButton.textContent = "Saving...";
-        saveButton.disabled = true;
-
-        // Simulate saving process (replace with actual API call if needed)
-        setTimeout(() => {
-          if (currentItem) {
-            console.log(`Item ${currentItem.name} deactivated. Reason: ${reason.value}${reason.value === "other" ? " - " + otherReason : ""}`);
-            currentItem.active = false;
-            updateGridSection();
-            currentItem = null;
-          }
-          if (currentCategoryToggle) {
-            console.log(`Category ${currentCategoryToggle.name} deactivated. Reason: ${reason.value}${reason.value === "other" ? " - " + otherReason : ""}`);
-            currentCategoryToggle.active = false;
-            updateCategorySection();
-            updateGridSection();
-            currentCategoryToggle = null;
-          }
-          // Revert button to original state and close modal
-          saveButton.textContent = "Save Changes";
-          saveButton.disabled = false;
-          closeModal();
-        }, 1000); // 1-second delay to simulate saving
-      }
-
-      // Initial load
-      selectMeal("breakfast");
-    </script>
+   <script src="menu.js"></script>
   </body>
 </html>

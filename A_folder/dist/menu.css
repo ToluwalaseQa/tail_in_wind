@@ -1,0 +1,213 @@
+/* Custom styles for toggle switch */
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+      }
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 20px;
+      }
+      .slider:before {
+        position: absolute;
+        content: '';
+        height: 16px;
+        width: 16px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+      input:checked + .slider {
+        background-color: #4caf50;
+      }
+      input:checked + .slider:before {
+        transform: translateX(20px);
+      }
+
+      /* Custom Tailwind colors and styles */
+      .bg-white-100 {
+        background-color: #ffffff;
+      }
+      .bg-white-20 {
+        background-color: #f5f5f5;
+      }
+      .bg-black-100 {
+        background-color: #212121;
+      }
+      .bg-black-10 {
+        background-color: #e0e0e0;
+      }
+      .text-icon-white-100 {
+        color: #ffffff;
+      }
+      .text-icon-black-100 {
+        color: #212121;
+      }
+      .bg-brand {
+        background-color: #ff6200;
+      }
+      .hover\:outline-black-20:hover {
+        outline: 1px solid #212121;
+      }
+      .rounded-6 {
+        border-radius: 24px;
+      }
+
+      /* Custom gradient background for body */
+      body {
+        background: linear-gradient(67.75deg, #ffffff 19.18%, #ffebe7 75.31%);
+      }
+
+      /* Custom styles for sections */
+      .header-section {
+        background: linear-gradient(90deg, #fff5f5, #ffe0e0);
+        border-radius: 12px;
+        padding: 8px 16px;
+        margin-bottom: 16px;
+        cursor: pointer;
+      }
+      .header-section:hover {
+        background: linear-gradient(90deg, #ffe0e0, #fff5f5);
+      }
+      .meal-tabs-section,
+      .category-tabs-section {
+        background: linear-gradient(90deg, #fff5f5, #ffe0e0);
+        border-radius: 12px;
+        padding: 8px;
+        margin-bottom: 16px;
+      }
+      .category-section {
+        background: linear-gradient(90deg, #fff5f5, #ffe0e0);
+        border-radius: 12px;
+        padding: 8px 16px;
+        margin-bottom: 16px;
+      }
+
+      /* Ensure tabs have consistent spacing and rounded edges */
+      .meal-tab,
+      .category-tab {
+        transition: all 0.3s ease;
+      }
+      .meal-tab.active,
+      .category-tab.active {
+        background-color: #000;
+        color: #fff;
+      }
+
+      /* Modal styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .modal-content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border-radius: 12px;
+        width: 90%;
+        max-width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+      }
+      .modal-content h2 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .modal-content p {
+        font-size: 0.875rem;
+        margin-bottom: 15px;
+      }
+      .modal-content .option-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 0.875rem;
+      }
+      .modal-content .radio-container {
+        position: relative;
+        width: 28px;
+        height: 28px;
+      }
+      .modal-content input[type="radio"] {
+        opacity: 0;
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        cursor: pointer;
+      }
+      .modal-content .radio-container::before {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        background: url('data:image/svg+xml;utf8,<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="28" rx="14" fill="black" fill-opacity="0.1"/></svg>')
+          no-repeat center center;
+        background-size: contain;
+      }
+      .modal-content input[type="radio"]:checked + .radio-container::before {
+        background: url('data:image/svg+xml;utf8,<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="28" rx="14" fill="black" fill-opacity="0.1"/><path d="M11 14.5L14 17.5L19 12.5" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+          no-repeat center center;
+        background-size: contain;
+      }
+      .modal-content #otherReasonInput {
+        display: none;
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        font-size: 0.875rem;
+      }
+      .modal-content button {
+        width: 100%;
+        padding: 10px;
+        background-color: #212121;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: opacity 0.3s;
+      }
+      .modal-content button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      .modal-content button:hover:not(:disabled) {
+        background-color: #333;
+      }
+      .close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+        line-height: 1;
+      }
