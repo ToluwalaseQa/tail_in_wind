@@ -1,4 +1,4 @@
-/* Custom styles for toggle switch */
+ /* Custom styles for toggle switch */
       .toggle-switch {
         position: relative;
         display: inline-block;
@@ -71,14 +71,15 @@
       /* Custom gradient background for body */
       body {
         background: linear-gradient(67.75deg, #ffffff 19.18%, #ffebe7 75.31%);
+        min-height: 100vh;
       }
 
       /* Custom styles for sections */
       .header-section {
         background: linear-gradient(90deg, #fff5f5, #ffe0e0);
         border-radius: 12px;
-        padding: 8px 16px;
-        margin-bottom: 16px;
+        padding: 1rem;
+        margin-bottom: 1rem;
         cursor: pointer;
       }
       .header-section:hover {
@@ -88,20 +89,21 @@
       .category-tabs-section {
         background: linear-gradient(90deg, #fff5f5, #ffe0e0);
         border-radius: 12px;
-        padding: 8px;
-        margin-bottom: 16px;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
       }
       .category-section {
         background: linear-gradient(90deg, #fff5f5, #ffe0e0);
         border-radius: 12px;
-        padding: 8px 16px;
-        margin-bottom: 16px;
+        padding: 1rem;
+        margin-bottom: 1rem;
       }
 
       /* Ensure tabs have consistent spacing and rounded edges */
       .meal-tab,
       .category-tab {
         transition: all 0.3s ease;
+        white-space: nowrap; /* Prevent text wrapping */
       }
       .meal-tab.active,
       .category-tab.active {
@@ -122,8 +124,8 @@
       }
       .modal-content {
         background-color: #fff;
-        margin: 15% auto;
-        padding: 20px;
+        margin: 10% auto;
+        padding: 1rem;
         border-radius: 12px;
         width: 90%;
         max-width: 300px;
@@ -133,17 +135,17 @@
       .modal-content h2 {
         font-size: 1.25rem;
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: 0.5rem;
       }
       .modal-content p {
         font-size: 0.875rem;
-        margin-bottom: 15px;
+        margin-bottom: 0.75rem;
       }
       .modal-content .option-label {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 10px;
+        margin-bottom: 0.5rem;
         font-size: 0.875rem;
       }
       .modal-content .radio-container {
@@ -175,22 +177,22 @@
       .modal-content #otherReasonInput {
         display: none;
         width: 100%;
-        padding: 8px;
-        margin-top: 5px;
+        padding: 0.5rem;
+        margin-top: 0.25rem;
         border: 1px solid #e0e0e0;
         border-radius: 4px;
         font-size: 0.875rem;
       }
       .modal-content button {
         width: 100%;
-        padding: 10px;
+        padding: 0.75rem;
         background-color: #212121;
         color: white;
         border: none;
         border-radius: 8px;
         font-size: 0.875rem;
         cursor: pointer;
-        margin-top: 10px;
+        margin-top: 0.75rem;
         transition: opacity 0.3s;
       }
       .modal-content button:disabled {
@@ -202,12 +204,122 @@
       }
       .close {
         position: absolute;
-        right: 20px;
-        top: 20px;
+        right: 1rem;
+        top: 1rem;
         font-size: 1.5rem;
         cursor: pointer;
         background: none;
         border: none;
         padding: 0;
         line-height: 1;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 1024px) {
+        .header-section {
+          padding: 0.75rem;
+        }
+        .meal-tabs-section,
+        .category-tabs-section {
+          padding: 0.25rem;
+        }
+        .category-section {
+          padding: 0.75rem;
+        }
+        .modal-content {
+          margin: 15% auto;
+          max-width: 250px;
+        }
+        .modal-content h2 {
+          font-size: 1.125rem;
+        }
+        .modal-content p,
+        .modal-content .option-label,
+        .modal-content #otherReasonInput,
+        .modal-content button {
+          font-size: 0.75rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .sidebar {
+          display: none;
+        }
+        .sidebar.active {
+          display: flex;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 250px;
+          height: 100%;
+          flex-direction: column;
+          background-color: #fff;
+          z-index: 1000;
+          padding: 1rem;
+        }
+        .main-content {
+          padding-top: 4rem;
+          padding-left: 0;
+          width: 100%;
+        }
+        .header-section {
+          flex-direction: column;
+          padding: 0.5rem;
+        }
+        .header-section .flex-wrap {
+          justify-content: center;
+          margin-top: 0.5rem;
+        }
+        .header-section button[style*="margin-left: auto"] {
+          margin-left: 0;
+          margin-top: 0.5rem;
+        }
+        .meal-tabs-section,
+        .category-tabs-section {
+          flex-direction: row;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        .meal-tab,
+        .category-tab {
+          min-width: 100px;
+          padding: 0.25rem 0.5rem;
+        }
+        #grid-section {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+        .modal-content {
+          margin: 20% auto;
+          max-width: 90%;
+          padding: 0.75rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .header-section h1 {
+          font-size: 1.5rem;
+        }
+        .meal-tab,
+        .category-tab {
+          min-width: 80px;
+          padding: 0.25rem;
+          font-size: 0.75rem;
+        }
+        .category-section h2 {
+          font-size: 1rem;
+        }
+        #grid-section {
+          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        }
+        .modal-content h2 {
+          font-size: 1rem;
+        }
+        .modal-content .option-label {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.25rem;
+        }
+        .modal-content .radio-container {
+          margin-left: 0;
+        }
       }

@@ -10,9 +10,15 @@
   </head>
   <body class="flex min-h-screen font-sans">
     <!-- Sidebar -->
-    <div
-      class="lg:fixed z-50 flex lg:h-full lg:left-0 lg:w-24 lg:flex-col lg:my-0 fixed flex-row w-auto top-0 left-[16px] right-[16px] bottom-auto h-[64px] rounded-6 my-4 items-center justify-between py-4 bg-white-100 lg:bg-transparent"
-    >
+    <div class="sidebar lg:fixed z-50 flex lg:h-full lg:left-0 lg:w-24 lg:flex-col lg:my-0 fixed flex-row w-auto top-0 left-[16px] right-[16px] bottom-auto h-[64px] rounded-6 my-4 items-center justify-between py-4 bg-white-100 lg:bg-transparent">
+      <!-- Hamburger Menu for Mobile -->
+      <button id="menuToggle" class="lg:hidden fixed top-4 left-4 z-50 p-2 bg-white-100 rounded-full">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 12H21" stroke="#212121" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 6H21" stroke="#212121" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 18H21" stroke="#212121" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
       <!-- Logo -->
       <img
         alt="logo"
@@ -51,7 +57,7 @@
           </a>
         </div>
         <div class="relative">
-          <a href="../../004/otp.html">
+          <a href="/en/live-counter">
             <button
               class="inline-flex items-center justify-center transition-colors hover:outline-black-20 hover:outline disabled:bg-black-5 disabled:text-black-40 disabled:outline-none h-[48px] bg-white-5 hover:outline-0 min-w-[48px] rounded-full text-[12px] md:text-[14px] lg:text-[14px] leading-[16px] font-bold"
             >
@@ -72,7 +78,7 @@
           </a>
         </div>
         <div class="relative">
-          <a href="../../004/otp.html">
+          <a href="/en/dashboard">
             <button
               class="inline-flex items-center justify-center transition-colors hover:outline-black-20 hover:outline disabled:bg-black-5 disabled:text-black-40 disabled:outline-none h-[48px] hover:outline-0 bg-brand min-w-[48px] rounded-full text-[12px] md:text-[14px] lg:text-[14px] leading-[16px] font-bold"
             >
@@ -92,9 +98,8 @@
             </button>
           </a>
         </div>
-        <!-- Order Status -->
         <div class="relative">
-          <a href="../../004/otp.html">
+          <a href="/en/order-status">
             <button
               class="inline-flex items-center justify-center transition-colors hover:outline-black-20 hover:outline disabled:bg-black-5 disabled:text-black-40 disabled:outline-none h-[48px] bg-white-5 hover:outline-0 min-w-[48px] rounded-full text-[12px] md:text-[14px] lg:text-[14px] leading-[16px] font-bold"
             >
@@ -114,9 +119,8 @@
             </button>
           </a>
         </div>
-        <!-- Menu MGT -->
         <div class="relative">
-          <a href="../../004/otp.html">
+          <a href="../A_folder/src/menu.html">
             <button
               class="inline-flex items-center justify-center transition-colors hover:outline-black-20 hover:outline disabled:bg-black-5 disabled:text-black-40 disabled:outline-none h-[48px] bg-white-5 hover:outline-0 min-w-[48px] rounded-full text-[12px] md:text-[14px] lg:text-[14px] leading-[16px] font-bold"
             >
@@ -136,9 +140,8 @@
             </button>
           </a>
         </div>
-        <!-- OTP Confirmation -->
         <div class="relative">
-          <a href="../../004/otp.html">
+          <a href="/en/otp-confirmation">
             <button
               class="inline-flex items-center justify-center transition-colors hover:outline-black-20 hover:outline disabled:bg-black-5 disabled:text-black-40 disabled:outline-none h-[48px] bg-white-5 hover:outline-0 min-w-[48px] rounded-full text-[12px] md:text-[14px] lg:text-[14px] leading-[16px] font-bold"
             >
@@ -179,9 +182,8 @@
               src="../assets/img3.png"
             />
           </button>
-          <!-- notifications -->
         </a>
-        <a href="../../004/otp.html">
+        <a href="/en/notifications">
           <button
             class="inline-flex items-center justify-center transition-colors hover:outline-black-20 hover:outline disabled:bg-black-5 disabled:text-black-40 disabled:outline-none h-[48px] bg-black-10 hover:outline-0 min-w-[48px] rounded-full text-[12px] md:text-[14px] lg:text-[14px] leading-[16px] font-bold"
           >
@@ -220,7 +222,7 @@
     </div>
 
     <!-- Main Content -->
-    <main class="flex-1 pt-[96px] lg:pt-4 lg:ml-24 p-4">
+    <main class="main-content flex-1 pt-[96px] lg:pt-4 lg:ml-24 p-4">
       <!-- Header -->
       <header
         class="header-section flex flex-col lg:flex-row justify-center items-center mb-4 text-center lg:text-left"
@@ -370,7 +372,7 @@
       </div>
     </main>
 
-    <!-- JavaScript for dynamic updates -->
-   <script src="menu.js"></script>
+    <!-- JavaScript for dynamic updates and sidebar toggle -->
+    <script src="menu.js"></script>
   </body>
 </html>

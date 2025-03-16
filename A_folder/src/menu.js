@@ -1,3 +1,10 @@
+// Sidebar toggle functionality
+const sidebar = document.querySelector('.sidebar');
+const menuToggle = document.getElementById('menuToggle');
+menuToggle.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+});
+
 // Data structure for meal types, categories, and items
 const menuData = {
   breakfast: {
