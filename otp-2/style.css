@@ -1067,3 +1067,7 @@
   syntax: "*";
   inherits: false;
 }
+
+#mainHeader {
+    background: linear-gradient(67.75deg, #ffffff 19.18%, #ffebe7 75.31%);
+}
