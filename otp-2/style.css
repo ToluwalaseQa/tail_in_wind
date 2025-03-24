@@ -1071,3 +1071,24 @@
 #mainHeader {
     background: linear-gradient(67.75deg, #ffffff 19.18%, #ffebe7 75.31%);
 }
+
+/* Add these styles to make OTP details scrollable and page fit screen */
+    .otp-details-container {
+      height: calc(100vh - 80px); /* Adjust based on header height */
+      overflow-y: auto;
+      scrollbar-width: thin;
+      padding-bottom: 30px;
+    }
+    
+    /* Ensure main content fits screen */
+    body {
+      height: 100%;
+      margin: 0;
+      overflow-y: hidden;
+    }
+    
+    .main-content {
+      height: calc(100vh - 80px); /* Adjust based on header height */
+    }
+
+   
