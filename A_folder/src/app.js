@@ -44,15 +44,8 @@ function validateEmail(email) {
 }
 
 function validatePassword(password) {
-  // Password must be at least 8 characters long
-  // Optionally: must contain at least one uppercase, one lowercase, one number, and one special character
-  const minLength = 8;
-  const passwordRegex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
-  return {
-    isValidLength: password.length >= minLength,
-    isComplexEnough: passwordRegex.test(password),
-  };
+  // Password must be exactly 6 characters long
+  return password.length === 6;
 }
 
 function checkButtonState() {
@@ -65,7 +58,7 @@ function checkButtonState() {
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
   const emailValid = validateEmail(email);
-  const passwordValidation = validatePassword(password);
+  const passwordValid = validatePassword(password);
 
   let errorText = '';
 
@@ -76,19 +69,12 @@ function checkButtonState() {
     errorText = 'Please enter a valid email address.';
   } else if (!password) {
     errorText = 'Password is required.';
-  } else if (!passwordValidation.isValidLength) {
-    errorText = 'Password must be at least 8 characters long.';
-  } else if (!passwordValidation.isComplexEnough) {
-    errorText =
-      'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.';
+  } else if (!passwordValid) {
+    errorText = 'Password must be exactly 6 characters long.';
   }
 
   // Update button state and error message
-  if (
-    emailValid &&
-    passwordValidation.isValidLength &&
-    passwordValidation.isComplexEnough
-  ) {
+  if (emailValid && passwordValid) {
     signInButton.classList.remove(
       'bg-gray-300',
       'text-gray-500',
@@ -124,7 +110,7 @@ function verifyCredentials() {
     return; // Do nothing if button is disabled
   }
 
-  if (email === 'samsmith@gmail.com' && password === '123456') {
+  if (email === 'samsmith@gmail.com' && password.length === 6) {
     alert('Login successful!');
     errorContainer.classList.add('hidden');
   } else {

@@ -39,7 +39,7 @@
         <!-- Right Section (Dynamic Content) -->
         <div class="flex flex-col w-full lg:w-[60%] min-h-[inherit] lg:min-h-0">
             <!-- Mobile Header -->
-            <div class="lg:hidden flex flex-col items-center pt-10">
+            <div class="lg:hidden flex flex-col items-center pt-4">
                 <div class="flex items-center space-x-2">
                     <img alt="Logo" loading="lazy" width="53.2" height="38.97" decoding="async" style="color:transparent" src="../assets/Logo (1).png">
                     <span class="text-[20px] md:text-[22px] lg:text-[24px] leading-[32px] tracking-[-0.02em] font-bold text-orange-500">Orderific</span>
@@ -54,21 +54,24 @@
                     <p class="text-[14px] md:text-[16px] lg:text-[16px] leading-[24px] tracking-[-0.01em] font-normal text-black/60">Manage, streamline, and thrive effortlessly.</p>
                 </div>
 
-                <!-- OTP Screen -->
-                <div id="otpScreen" class="w-full">
-                    <div class="space-y-2">
-                        <label class="text-[12px] md:text-[13px] lg:text-[13px] leading-[16px] font-bold text-black/60 pl-4 block">Enter 6 digit pin</label>
-                        <div class="flex space-x-2" id="otpInput">
-                            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp1">
-                            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp2">
-                            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp3">
-                            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp4">
-                            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp5">
-                            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp6">
-                        </div>
-                    </div>
-                    <button class="inline-flex items-center justify-center rounded-[30px] transition-colors hover:bg-black/10 h-[48px] text-[14px] md:text-[16px] lg:text-[16px] leading-[24px] tracking-[-0.01em] font-bold w-full py-3 px-4 mt-4 bg-black text-white" onclick="verifyOTP()">Sign In</button>
-                </div>
+              <!-- OTP Screen -->
+<div id="otpScreen" class="w-full flex flex-col items-center">
+    <div class="space-y-2 flex flex-col items-center">
+        <label class="text-[12px] md:text-[13px] lg:text-[13px] leading-[16px] text-black/60 text-center block">
+            <strong>Enter</strong> 6 digit pin
+        </label>
+        <div class="flex space-x-2 items-center" id="otpInput">
+            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp1">
+            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp2">
+            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp3">
+            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp4">
+            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp5">
+            <input type="text" maxlength="1" class="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center text-center focus:outline-none focus:border-black/20" id="otp6">
+        </div>
+        <p>Login with Email</p>
+    </div>
+    <button class="inline-flex items-center justify-center rounded-[30px] transition-colors hover:bg-black/10 h-[48px] text-[14px] md:text-[16px] lg:text-[16px] leading-[24px] tracking-[-0.01em] font-bold w-full py-3 px-4 mt-4 bg-black text-white" onclick="verifyOTP()">Sign In</button>
+</div>
 
                 <!-- Email/Password Screen -->
                 <div id="emailScreen" class="w-full hidden">
