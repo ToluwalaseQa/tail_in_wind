@@ -1091,4 +1091,20 @@
       height: calc(100vh - 80px); /* Adjust based on header height */
     }
 
+    @media (orientation: portrait) {
+      body {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      .main-content {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      #mainHeader,
+      .otp-details-container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
    

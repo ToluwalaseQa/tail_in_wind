@@ -17,6 +17,14 @@
                 padding: 16px;
             }
 
+            /* Add this new media query for portrait mode */
+    @media (orientation: portrait) and (max-width: 1023px) {
+        .lg\:px-\[20px\] {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+        }
+    }
+
 </style>
 <body class="font-['DM_Sans'] background1 min-h-screen w-full max-w-[100vw] overflow-x-hidden flex flex-col">
     <div id="menu-container" class="flex h-full flex-col lg:flex-row">
