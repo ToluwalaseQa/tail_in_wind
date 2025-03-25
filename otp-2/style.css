@@ -1093,8 +1093,7 @@
 
     @media (orientation: portrait) {
       body {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding: 16px;
       }
       .main-content {
         width: 100%;

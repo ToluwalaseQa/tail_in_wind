@@ -5,8 +5,7 @@
         /* Portrait mode padding */
         @media (orientation: portrait) {
             body {
-                padding-left: 16px;
-                padding-right: 16px;
+               padding: 16px;
             }
 
             #menu-container {
@@ -82,10 +81,5 @@
         padding-right: 16px;
         padding-top: 0; /* Remove extra spacing */
         margin-left: 0; /* Reset lg:ml-20 */
-    }
-
-    /* Ensure body doesn’t add extra padding */
-    body {
-        padding-top: 0; /* Avoid overlap or extra space */
     }
 }
