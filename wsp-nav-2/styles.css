@@ -1,0 +1,91 @@
+ #mainHeader {
+            padding: 16px;
+        }
+
+        /* Portrait mode padding */
+        @media (orientation: portrait) {
+            body {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            #menu-container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            #mainHeader {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .main-content {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            #Responsive-menu-container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        @media (orientation: portrait) {
+    .header-container {
+        /* Match #mainHeader’s layout */
+        position: sticky; /* Change from fixed to sticky like #mainHeader */
+        top: 0; /* Align with #mainHeader’s top positioning */
+        flex-direction: row; /* Force row layout like #mainHeader */
+        flex-wrap: nowrap; /* Match #mainHeader’s nowrap */
+        justify-content: space-between; /* Distribute content like #mainHeader */
+        align-items: center; /* Center vertically like #mainHeader */
+        padding-top: 24px; /* Match py-6 (24px vertical) */
+        padding-bottom: 24px;
+        background: white; /* Match #mainHeader’s bg-transparent */
+    }
+    .header-container > div {
+        margin: 0; /* Reset any spacing issues */
+    }
+    .header-container .hidden.lg\:flex {
+        display: none; /* Keep menu hidden in portrait */
+    }
+    .header-container > div:last-child {
+        flex-direction: row; /* Keep horizontal like #mainHeader’s button */
+        margin-bottom: 0; /* Reset lg:mb-5 */
+        width: auto; /* Allow natural width */
+        height: auto;
+    }
+}
+@media (orientation: portrait) {
+   
+
+    /* mainHeader */
+    #mainHeader {
+        top: 0; /* Reset top-16 to stack directly below */
+        margin-top: 0; /* Remove any gap */
+        padding: 8px 16px; /* Match header-container, reduce py-6 */
+        background: transparent; /* Keep as is */
+        z-index: 19; /* Below header-container */
+    }
+
+    /* Status bar */
+    .flex.justify-between.items-center.mb-\[20px\] {
+        margin-top: 0; /* Remove mt-12 */
+        padding: 8px 16px; /* Match padding */
+        background: rgba(0, 0, 0, 0.05); /* Keep as is */
+    }
+
+    /* Parent container adjustments */
+    .sm\:mx-auto.lg\:px-\[20px\] {
+        padding-left: 16px; /* Match body */
+        padding-right: 16px;
+        padding-top: 0; /* Remove extra spacing */
+        margin-left: 0; /* Reset lg:ml-20 */
+    }
+
+    /* Ensure body doesn’t add extra padding */
+    body {
+        padding-top: 0; /* Avoid overlap or extra space */
+    }
+}
