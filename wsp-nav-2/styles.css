@@ -2,6 +2,21 @@
             padding: 16px;
         }
 
+.large{
+    color: #FFF;
+}
+.card-btn {
+    color: #FFF;
+}
+
+.Ready{
+    color: #000;
+    font-size: bold;
+}
+.Black_prep{
+    color: #000;
+}
+
         /* Portrait mode padding */
         @media (orientation: portrait) {
             body {
